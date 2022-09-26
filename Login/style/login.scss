@@ -1,0 +1,209 @@
+// Resets
+* {
+    box-sizing: border-box;  
+    font-family: inherit;
+  }
+
+body {
+  height: 100vh;
+  margin: 0; 
+  padding-bottom: 10%;
+  font-family: 'Nunito', sans-serif;
+  background: linear-gradient(
+    131deg,
+    rgba(127, 127, 213,1) 10%,
+    rgba(131, 151, 224,1) 49%,
+    rgba(145, 234, 228,1) 100%
+  )no-repeat;
+}
+ 
+//color variables
+// Colors 
+$c-blue: #008FFF;
+$c-white: #fefefe;
+$c-black: rgb(52, 52, 52);
+
+// Transparent Colors
+$t-blue: rgba(17, 38, 190, 0.8);
+$t-blendblue: #5ee1ff;
+$t-gray: rgba(194, 194, 194, 0.8);
+
+//Logo Style Color
+$l-bluegreen:#00BFDB;
+$l-lightblue: #008FFF;
+$l-deepblue: #00217E;
+
+// Shadows
+$s-basic: 0 3px 6px rgba(0,0,0,0.12), 0 3px 6px rgba(65, 65, 65, 0.23);
+$s-blue: 0 3px 6px rgba(142, 167, 255, 0.12), 0 3px 6px rgba(54, 144, 255, 0.23);
+
+// Imports
+@import url('https://fonts.googleapis.com/css?family=Nunito:400');
+
+// Global Layout
+.wrapper {
+  margin: 3rem auto 0.2rem auto;
+  padding: 2rem 0;
+  width: 400px;
+  border-radius: 20px;
+  box-shadow: $s-basic;
+  background: #fafdff;
+  position: relative;
+  z-index: -2;
+}
+
+.section { padding: 1rem; }
+
+.hexagon{
+    width: 80px;
+    height: 80px;
+    margin: 0 auto;
+    background-color: $l-lightblue;
+    border-radius: 50px;
+    position: relative;
+
+    &:before{
+      content: "";
+      display: block;
+      position: relative;
+      z-index: -1;
+      top: 0;
+      left: -40px;
+      width: 80px;
+      height: 80px;
+      border-radius: 50px;
+      background-color: $l-bluegreen;
+    }
+    &:after{
+      content: "";
+      position: absolute;
+      width: 80px;
+      height: 80px;
+      top: 0px;
+      left: 40px;
+      border-radius: 50px;
+      background-color: $l-deepblue;
+    }
+
+}
+
+// Header Styles
+.header {
+  position: relative;
+  text-align: center;
+  
+  &__text {
+    position: relative;
+    padding: 0.5rem 0 0.7rem;
+    
+    > h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      color: $c-black;
+    }
+  }
+}
+.inputbox-sec{
+  display: flex;
+  border: 0;
+  border-radius: 55px;
+  width: 100%;
+  height: 3rem;
+  padding: 0 0 0.10rem 1.5rem;
+  font-size: 1rem;
+  box-shadow: $s-basic;
+  background: $c-white;
+
+  > i{
+    display: flex;
+    align-items: center;
+    color:$t-gray;
+  }
+  > input {
+    border: none;
+    width: 100%;
+    height: 3rem;
+    padding: 0 0 0.10rem 1.1rem;
+    font-size: 1rem;
+    color: $c-blue;
+    background: transparent;
+
+    &:focus {
+      outline: none;
+    }
+
+    &::placeholder {
+      color: $t-gray;
+    }
+  }
+  
+}
+// Form, input and button styles
+form {
+  margin: 0 auto;
+  padding: 0 5px;
+  max-width: 17.5rem;
+  overflow: auto;
+  
+  > * + * {
+    margin-top: 1rem;
+  }
+  
+  > button {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    border: 0;
+    box-shadow: $s-blue;
+    border-radius: 200px;
+    width: 100%;
+    padding: 0.85rem;
+    font-size: 1rem;
+    color: $c-white;
+    background: $c-blue;
+
+    &:focus {
+      outline: none;
+    }  
+  }
+  
+  > p {
+    margin: 0.25rem 0 0;
+    text-align: center;
+    color: $c-blue; 
+  }
+}
+
+// Switch btn
+.opposite-option{
+    text-align: center;
+    padding-top: 10px;
+    cursor: pointer;
+    
+    >.opposite-btn1{
+      color: gray;
+      font-size: 13px;
+      margin: 0 0 5px 0;
+    }
+    >.opposite-btn2{
+      color: $c-blue;
+      font-size: 13px;
+      margin: 0;
+    }
+}
+
+.links {
+    display: flex; 
+    justify-content: center;
+
+    > a{ 
+      padding: 0 15px; 
+      color: $c-black;
+    }
+}
+//maker( kate Hwang )
+.makeby{ 
+    font-size: 0.8rem;
+    color: $c-white; 
+    text-align: center;
+    letter-spacing: 1px;
+  }
