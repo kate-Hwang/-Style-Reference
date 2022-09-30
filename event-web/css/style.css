@@ -15,10 +15,16 @@ header {
   margin: 0 auto;
 }
 
+.report-drive-cont01 .inner {
+  text-align: center;
+}
+
 .cont {
   display: inline-flex;
   justify-content: center;
   width: 32%;
   height: 200px;
+  border-radius: 10px;
+  box-shadow: gray;
   border: 1px solid red;
 }/*# sourceMappingURL=style.css.map */
